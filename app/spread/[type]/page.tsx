@@ -67,7 +67,7 @@ export default function SpreadPage() {
     <div>
       <button
         onClick={() => router.push("/")}
-        className="text-sm text-gray-500 hover:text-gray-700 mb-4"
+        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 mb-4"
       >
         ← 스프레드 선택
       </button>
@@ -94,7 +94,7 @@ export default function SpreadPage() {
           />
           <button
             onClick={handleReset}
-            className="mt-6 w-full py-3 rounded-lg text-sm font-medium border border-gray-300 hover:border-gray-400 transition-colors"
+            className="mt-6 w-full py-3 rounded-lg text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 dark:text-gray-300 transition-colors"
           >
             다시 뽑기
           </button>

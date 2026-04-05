@@ -16,12 +16,12 @@ export default function CardFace({ card, reversed, label }: CardFaceProps) {
   return (
     <div className="flex flex-col items-center gap-1">
       <div
-        className={`w-20 h-36 sm:w-24 sm:h-40 relative rounded-lg overflow-hidden border border-gray-200 shadow-sm ${
+        className={`w-20 h-36 sm:w-24 sm:h-40 relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm ${
           reversed ? "rotate-180" : ""
         }`}
       >
         {imgError ? (
-          <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-xs text-gray-400 p-1 text-center">
+          <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs text-gray-400 p-1 text-center">
             {card.name}
           </div>
         ) : (
@@ -35,7 +35,7 @@ export default function CardFace({ card, reversed, label }: CardFaceProps) {
           />
         )}
       </div>
-      <span className="text-xs text-gray-500">{label}</span>
+      <span className="text-xs text-gray-500 dark:text-gray-400">{label}</span>
       <span className="text-xs font-medium">
         {card.name}
         {reversed ? " (역)" : ""}

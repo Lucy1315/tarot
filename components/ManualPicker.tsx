@@ -26,7 +26,7 @@ export default function ManualPicker({
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-gray-500 text-center">
+      <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
         카드를 {cardCount}장 선택하세요 ({selectedIds.length}/{cardCount})
       </p>
 
@@ -50,7 +50,7 @@ export default function ManualPicker({
       <button
         onClick={() => onComplete(selectedIds)}
         disabled={selectedIds.length !== cardCount}
-        className="w-full py-3 rounded-lg text-sm font-medium transition-colors disabled:bg-gray-200 disabled:text-gray-400 bg-gray-900 text-white hover:bg-gray-800"
+        className="w-full py-3 rounded-lg text-sm font-medium transition-colors disabled:bg-gray-200 dark:disabled:bg-gray-800 disabled:text-gray-400 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200"
       >
         결과 보기
       </button>

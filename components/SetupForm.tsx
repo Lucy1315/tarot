@@ -21,7 +21,7 @@ export default function SetupForm({ spreadName, onStart }: SetupFormProps) {
       <h2 className="text-xl font-bold">{spreadName}</h2>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           질문 (선택사항)
         </label>
         <input
@@ -29,17 +29,17 @@ export default function SetupForm({ spreadName, onStart }: SetupFormProps) {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           placeholder="궁금한 것을 입력하세요"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900"
+          className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400"
         />
       </div>
 
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-gray-700">역방향 카드</span>
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">역방향 카드</span>
         <button
           type="button"
           onClick={() => setAllowReversed(!allowReversed)}
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-            allowReversed ? "bg-gray-900" : "bg-gray-300"
+            allowReversed ? "bg-gray-900 dark:bg-gray-200" : "bg-gray-300 dark:bg-gray-600"
           }`}
         >
           <span
@@ -51,7 +51,7 @@ export default function SetupForm({ spreadName, onStart }: SetupFormProps) {
       </div>
 
       <div>
-        <span className="block text-sm font-medium text-gray-700 mb-2">
+        <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           선택 방식
         </span>
         <div className="flex gap-2">
@@ -59,8 +59,8 @@ export default function SetupForm({ spreadName, onStart }: SetupFormProps) {
             onClick={() => setMode("auto")}
             className={`flex-1 py-2 text-sm rounded-lg border transition-colors ${
               mode === "auto"
-                ? "bg-gray-900 text-white border-gray-900"
-                : "border-gray-300 text-gray-700 hover:border-gray-400"
+                ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
+                : "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400"
             }`}
           >
             자동 셔플
@@ -69,8 +69,8 @@ export default function SetupForm({ spreadName, onStart }: SetupFormProps) {
             onClick={() => setMode("manual")}
             className={`flex-1 py-2 text-sm rounded-lg border transition-colors ${
               mode === "manual"
-                ? "bg-gray-900 text-white border-gray-900"
-                : "border-gray-300 text-gray-700 hover:border-gray-400"
+                ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
+                : "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400"
             }`}
           >
             수동 선택
@@ -80,7 +80,7 @@ export default function SetupForm({ spreadName, onStart }: SetupFormProps) {
 
       <button
         onClick={() => onStart({ question, allowReversed, mode })}
-        className="w-full bg-gray-900 text-white py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+        className="w-full bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
       >
         {mode === "auto" ? "셔플하기" : "카드 선택하기"}
       </button>

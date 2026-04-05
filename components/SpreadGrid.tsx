@@ -8,11 +8,11 @@ export default function SpreadGrid() {
         <Link
           key={spread.id}
           href={`/spread/${spread.id}`}
-          className="border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+          className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-sm transition-all"
         >
           <h3 className="font-medium text-sm">{spread.name}</h3>
-          <p className="text-xs text-gray-500 mt-1">{spread.cardCount}장</p>
-          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{spread.cardCount}장</p>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 line-clamp-2">
             {spread.description}
           </p>
         </Link>

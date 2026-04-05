@@ -9,8 +9,8 @@ export default function CardBack({ selected, onClick }: CardBackProps) {
       onClick={onClick}
       className={`relative w-16 h-28 rounded-lg border-2 transition-all ${
         selected !== undefined
-          ? "border-gray-900 bg-gray-800"
-          : "border-gray-300 bg-gray-700 hover:border-gray-500"
+          ? "border-gray-900 dark:border-gray-200 bg-gray-800 dark:bg-gray-700"
+          : "border-gray-300 dark:border-gray-600 bg-gray-700 dark:bg-gray-800 hover:border-gray-500"
       }`}
     >
       <div className="absolute inset-1 border border-gray-500 rounded opacity-50" />

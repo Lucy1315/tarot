@@ -78,12 +78,12 @@ export default function ReadingStream({
   return (
     <div className="mt-6 space-y-3">
       <h3 className="text-lg font-bold">AI 해석</h3>
-      <div className="prose prose-sm max-w-none text-gray-700 whitespace-pre-wrap">
+      <div className="prose prose-sm max-w-none text-gray-700 dark:text-gray-300 whitespace-pre-wrap">
         {text}
         {loading && <span className="animate-pulse">▌</span>}
       </div>
       {error && (
-        <div className="text-sm text-red-600 bg-red-50 rounded-lg p-3">
+        <div className="text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950 rounded-lg p-3">
           {error}
           <button
             onClick={() => {
