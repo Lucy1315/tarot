@@ -24,3 +24,16 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .card-flip {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .card-flip.flipped {
+    transform: rotateY(180deg);
+  }
+  .card-reversed {
+    transform: rotate(180deg);
+  }
+}
