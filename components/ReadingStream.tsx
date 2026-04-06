@@ -76,7 +76,7 @@ export default function ReadingStream({
   }, [spread, drawnCards, question]);
 
   return (
-    <div className="mt-6 space-y-3">
+    <div className="mt-3 space-y-3">
       <h3 className="text-lg font-bold">AI 해석</h3>
       <div className="prose prose-sm max-w-none text-gray-700 dark:text-gray-300 whitespace-pre-wrap">
         {text}
