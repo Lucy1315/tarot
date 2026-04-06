@@ -35,6 +35,9 @@ const spreadNameMap: Record<string, string> = {
   "릴레이션십": "RELATIONSHIP",
   "컵 오브 릴레이션십": "CUP OF RELATIONSHIP",
   "음양": "YIN-YANG",
+  "리딩 마인드": "READING MIND",
+  "호로스코프": "HOROSCOPE",
+  "1년 운세": "YEARLY FORTUNE",
 };
 
 export default function SetupForm({

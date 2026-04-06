@@ -30,21 +30,19 @@ export default function ManualPicker({
         카드를 {cardCount}장 선택하세요 ({selectedIds.length}/{cardCount})
       </p>
 
-      <div className="overflow-x-auto pb-2">
-        <div className="grid grid-cols-9 sm:grid-cols-13 gap-1.5 min-w-[600px]">
-          {Array.from({ length: 78 }, (_, i) => {
-            const orderIndex = selectedIds.indexOf(i);
-            return (
-              <CardBack
-                key={i}
-                selected={
-                  orderIndex !== -1 ? orderIndex + 1 : undefined
-                }
-                onClick={() => toggleCard(i)}
-              />
-            );
-          })}
-        </div>
+      <div className="grid grid-cols-6 sm:grid-cols-9 md:grid-cols-13 gap-1 sm:gap-1.5">
+        {Array.from({ length: 78 }, (_, i) => {
+          const orderIndex = selectedIds.indexOf(i);
+          return (
+            <CardBack
+              key={i}
+              selected={
+                orderIndex !== -1 ? orderIndex + 1 : undefined
+              }
+              onClick={() => toggleCard(i)}
+            />
+          );
+        })}
       </div>
 
       <button
