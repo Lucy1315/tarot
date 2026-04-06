@@ -65,15 +65,23 @@ export default function SpreadPage() {
 
   return (
     <div>
-      <button
-        onClick={() => router.push("/")}
-        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 mb-4"
-      >
-        ← 스프레드 선택
-      </button>
-
       {phase === "setup" && (
-        <SetupForm spreadName={spread.name} onStart={handleStart} />
+        <SetupForm
+          spreadName={spread.name}
+          spreadDescription={spread.description}
+          cardCount={spread.cardCount}
+          onStart={handleStart}
+          onGoHome={() => router.push("/")}
+        />
+      )}
+
+      {(phase === "picking" || phase === "result") && (
+        <button
+          onClick={() => router.push("/")}
+          className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 mb-4"
+        >
+          ← 스프레드 선택
+        </button>
       )}
 
       {phase === "picking" && (

@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import OpenAI from "openai";
-import { buildReadingPrompt } from "@/lib/prompt";
+import { buildReadingPrompt, SYSTEM_PROMPT } from "@/lib/prompt";
 
 export async function POST(request: NextRequest) {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -28,8 +28,11 @@ export async function POST(request: NextRequest) {
 
   try {
     const stream = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
+      model: "gpt-4o",
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: prompt },
+      ],
       stream: true,
     });
 
