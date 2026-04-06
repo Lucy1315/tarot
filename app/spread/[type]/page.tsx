@@ -85,6 +85,12 @@ export default function SpreadPage() {
 
       {phase === "result" && (
         <div>
+          {question && (
+            <div className="mb-4 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">나의 질문</p>
+              <p className="text-sm font-medium dark:text-gray-200">{question}</p>
+            </div>
+          )}
           <SpreadLayout spread={spread} drawnCards={drawnCards} />
           <ReadingStream
             key={readingKey}
