@@ -51,20 +51,22 @@ export default function SetupForm({
 
   return (
     <div className="space-y-5">
-      {/* Top tab navigation — half width */}
-      <div className="flex w-1/2 rounded-lg overflow-hidden border border-gray-600">
-        <button
-          onClick={onGoHome}
-          className="flex-1 py-2 text-sm font-medium transition-colors bg-gray-700 text-gray-200 hover:bg-gray-600"
-        >
-          메뉴
-        </button>
-        <button
-          onClick={() => setShowGuide(true)}
-          className="flex-1 py-2 text-sm font-medium transition-colors border-l border-gray-600 bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-200"
-        >
-          가이드
-        </button>
+      {/* Top tab navigation — half width, centered */}
+      <div className="flex justify-center">
+        <div className="flex w-1/2 rounded-lg overflow-hidden border border-gray-600">
+          <button
+            onClick={onGoHome}
+            className="flex-1 py-2 text-sm font-medium transition-colors bg-gray-700 text-gray-200 hover:bg-gray-600"
+          >
+            홈
+          </button>
+          <button
+            onClick={() => setShowGuide(true)}
+            className="flex-1 py-2 text-sm font-medium transition-colors border-l border-gray-600 bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-200"
+          >
+            카드 위치 가이드
+          </button>
+        </div>
       </div>
 
       {/* Spread name in gold */}

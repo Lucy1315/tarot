@@ -8,7 +8,7 @@ export default function SpreadGrid() {
         <Link
           key={spread.id}
           href={`/spread/${spread.id}`}
-          className="block py-3 px-4 rounded-lg transition-colors bg-[#3B4557] hover:bg-[#4A5568]"
+          className="block py-3 px-4 rounded-lg transition-colors bg-[#3B4557] hover:bg-[#4A5568] text-center"
         >
           <span className="block text-sm font-medium text-[#8EACC1]">
             {spread.name}
