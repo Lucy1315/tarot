@@ -29,6 +29,8 @@ export async function POST(request: NextRequest) {
   try {
     const stream = await openai.chat.completions.create({
       model: "gpt-4o",
+      temperature: 0.9,
+      max_tokens: 4000,
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: prompt },
