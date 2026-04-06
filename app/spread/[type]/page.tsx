@@ -67,9 +67,7 @@ export default function SpreadPage() {
     <div>
       {phase === "setup" && (
         <SetupForm
-          spreadName={spread.name}
-          spreadDescription={spread.description}
-          cardCount={spread.cardCount}
+          spread={spread}
           onStart={handleStart}
           onGoHome={() => router.push("/")}
         />
@@ -94,9 +92,8 @@ export default function SpreadPage() {
       {phase === "result" && (
         <div>
           {question && (
-            <div className="mb-4 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
-              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">나의 질문</p>
-              <p className="text-sm font-medium dark:text-gray-200">{question}</p>
+            <div className="mb-6 mx-auto max-w-md text-center py-3 px-6 rounded-full bg-gray-200/80 dark:bg-gray-700/80">
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-200">{question}</p>
             </div>
           )}
           <SpreadLayout spread={spread} drawnCards={drawnCards} />
