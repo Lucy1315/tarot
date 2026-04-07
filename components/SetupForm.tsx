@@ -109,7 +109,7 @@ export default function SetupForm({
 
       {/* Reverse toggle */}
       <div className="flex items-center justify-center gap-3 text-sm text-gray-400">
-        <span className="text-white font-medium">역방향</span>
+        <span className="text-black font-medium">역방향</span>
         <button
           role="switch"
           aria-checked={allowReversed}
@@ -124,7 +124,7 @@ export default function SetupForm({
             }`}
           />
         </button>
-        <span className={allowReversed ? "text-white font-medium" : "text-gray-300"}>
+        <span className="text-black font-medium">
           {allowReversed ? "On" : "Off"}
         </span>
         <div className="relative group">
