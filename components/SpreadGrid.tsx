@@ -13,7 +13,7 @@ export default function SpreadGrid() {
           <span className="block text-sm font-medium text-white">
             {spread.name}
           </span>
-          <span className="block text-xs text-gray-400 mt-1 line-clamp-2">
+          <span className="block text-xs text-gray-200 mt-1 line-clamp-2">
             {spread.description}
           </span>
         </Link>
