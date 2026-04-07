@@ -4,7 +4,7 @@ export const spreads: Spread[] = [
   {
     id: "one-card",
     name: "원 카드",
-    description: "하나의 카드로 핵심 메시지를 받습니다",
+    description: "오늘의 핵심 메시지를 한 장으로 빠르게 확인하는 가장 간단한 스프레드",
     cardCount: 1,
     positions: [
       { index: 0, label: "핵심 메시지", x: 50, y: 50 },
@@ -13,7 +13,7 @@ export const spreads: Spread[] = [
   {
     id: "two-cards",
     name: "2카드",
-    description: "두 장으로 상황과 조언을 봅니다",
+    description: "현재 상황과 해결을 위한 조언을 두 장으로 간결하게 파악합니다",
     cardCount: 2,
     positions: [
       { index: 0, label: "현재 상황", x: 35, y: 50 },
@@ -23,7 +23,7 @@ export const spreads: Spread[] = [
   {
     id: "three-cards",
     name: "3카드",
-    description: "과거, 현재, 미래를 봅니다",
+    description: "과거의 원인, 현재의 상태, 미래의 방향을 시간 흐름으로 읽습니다",
     cardCount: 3,
     positions: [
       { index: 0, label: "과거", x: 25, y: 50 },
@@ -34,7 +34,7 @@ export const spreads: Spread[] = [
   {
     id: "four-cards",
     name: "4카드",
-    description: "상황, 원인, 조언, 결과를 봅니다",
+    description: "현재 상황의 원인을 짚고, 조언과 최종 결과까지 네 단계로 분석합니다",
     cardCount: 4,
     positions: [
       { index: 0, label: "현재 상황", x: 15, y: 50 },
@@ -46,7 +46,7 @@ export const spreads: Spread[] = [
   {
     id: "five-cards",
     name: "5카드",
-    description: "다섯 장으로 상황을 입체적으로 봅니다",
+    description: "현재·과거·미래에 원인과 잠재력을 더해 상황을 입체적으로 파악합니다",
     cardCount: 5,
     positions: [
       { index: 0, label: "현재", x: 10, y: 50 },
@@ -59,7 +59,7 @@ export const spreads: Spread[] = [
   {
     id: "double-line",
     name: "더블 라인",
-    description: "두 줄로 현재와 미래를 대비합니다",
+    description: "현재 상황 3장과 미래 전망 3장을 나란히 놓고 흐름의 변화를 비교합니다",
     cardCount: 6,
     positions: [
       { index: 0, label: "현재 1", x: 25, y: 30 },
@@ -73,7 +73,7 @@ export const spreads: Spread[] = [
   {
     id: "celtic-cross",
     name: "켈틱 크로스",
-    description: "가장 전통적인 10장 스프레드입니다",
+    description: "타로의 대표 스프레드로, 10장이 상황·장애·과거·미래·환경·결과를 총체적으로 분석합니다",
     cardCount: 10,
     positions: [
       { index: 0, label: "현재 상황", x: 30, y: 50 },
@@ -91,7 +91,7 @@ export const spreads: Spread[] = [
   {
     id: "mini-celtic",
     name: "미니 켈틱 크로스",
-    description: "켈틱 크로스의 간소화 버전입니다",
+    description: "켈틱 크로스의 핵심만 6장으로 압축해 빠르면서도 깊이 있는 리딩을 제공합니다",
     cardCount: 6,
     positions: [
       { index: 0, label: "현재 상황", x: 30, y: 50 },
@@ -105,7 +105,7 @@ export const spreads: Spread[] = [
   {
     id: "cross",
     name: "십자",
-    description: "십자 형태로 상황을 조망합니다",
+    description: "중심에 현재를 놓고 과거·미래·의식·무의식을 사방으로 펼쳐 봅니다",
     cardCount: 5,
     positions: [
       { index: 0, label: "현재", x: 50, y: 50 },
@@ -118,7 +118,7 @@ export const spreads: Spread[] = [
   {
     id: "horseshoe",
     name: "말발굽",
-    description: "말발굽 형태로 흐름을 봅니다",
+    description: "과거에서 미래로 이어지는 아치형 흐름 속 숨겨진 영향과 조언을 읽습니다",
     cardCount: 5,
     positions: [
       { index: 0, label: "과거", x: 10, y: 70 },
@@ -131,7 +131,7 @@ export const spreads: Spread[] = [
   {
     id: "magic-seven",
     name: "매직 세븐",
-    description: "7장으로 상황을 깊이 분석합니다",
+    description: "과거·현재·미래를 중심으로 조언·주변·장애물·결과까지 7장의 깊이 있는 분석",
     cardCount: 7,
     positions: [
       { index: 0, label: "과거", x: 10, y: 70 },
@@ -146,7 +146,7 @@ export const spreads: Spread[] = [
   {
     id: "pyramid",
     name: "피라미드",
-    description: "피라미드 형태로 단계별 분석합니다",
+    description: "정점에서 기반까지 3단계로 쌓아 올리며 상황의 구조를 파악합니다",
     cardCount: 6,
     positions: [
       { index: 0, label: "정점", x: 50, y: 15 },
@@ -160,7 +160,7 @@ export const spreads: Spread[] = [
   {
     id: "alternative",
     name: "양자택일",
-    description: "두 가지 선택지를 비교합니다",
+    description: "A와 B 두 갈래의 과정과 결과를 나란히 비교해 결정을 돕습니다",
     cardCount: 5,
     positions: [
       { index: 0, label: "현재 상황", x: 50, y: 50 },
@@ -173,7 +173,7 @@ export const spreads: Spread[] = [
   {
     id: "tandem",
     name: "탄뎀",
-    description: "두 사람의 관계를 나란히 봅니다",
+    description: "나와 상대의 과거·현재·미래를 나란히 놓고 두 사람의 흐름을 비교합니다",
     cardCount: 6,
     positions: [
       { index: 0, label: "나의 과거", x: 30, y: 25 },
@@ -187,7 +187,7 @@ export const spreads: Spread[] = [
   {
     id: "relationship",
     name: "릴레이션십",
-    description: "관계의 다양한 측면을 분석합니다",
+    description: "나·상대·관계를 축으로 감정, 장애물, 결과까지 7장으로 관계를 심층 분석합니다",
     cardCount: 7,
     positions: [
       { index: 0, label: "나", x: 20, y: 30 },
@@ -202,7 +202,7 @@ export const spreads: Spread[] = [
   {
     id: "cup-of-relationship",
     name: "컵 오브 릴레이션십",
-    description: "관계를 더 깊이 들여다봅니다",
+    description: "의식과 무의식, 과거와 미래를 아울러 8장으로 관계의 내면까지 깊이 들여다봅니다",
     cardCount: 8,
     positions: [
       { index: 0, label: "나의 의식", x: 25, y: 20 },
@@ -218,7 +218,7 @@ export const spreads: Spread[] = [
   {
     id: "yin-yang",
     name: "음양",
-    description: "음과 양의 균형을 봅니다",
+    description: "의식과 무의식, 행동과 감정의 양면을 음양으로 나누어 균형을 읽습니다",
     cardCount: 6,
     positions: [
       { index: 0, label: "양(의식)", x: 35, y: 25 },
@@ -232,7 +232,7 @@ export const spreads: Spread[] = [
   {
     id: "reading-mind",
     name: "리딩 마인드",
-    description: "상대방의 마음을 읽는 스프레드입니다",
+    description: "상대의 겉마음과 속마음, 나에 대한 감정과 앞으로의 행동을 읽어냅니다",
     cardCount: 5,
     positions: [
       { index: 0, label: "상대의 겉마음", x: 50, y: 15 },
@@ -245,7 +245,7 @@ export const spreads: Spread[] = [
   {
     id: "horoscope",
     name: "호로스코프",
-    description: "12하우스로 삶의 전반을 조망합니다",
+    description: "점성술의 12하우스 배치로 자아·재물·건강·관계 등 삶 전반을 조망합니다",
     cardCount: 12,
     positions: [
       { index: 0, label: "1하우스(자아)", x: 50, y: 10 },
@@ -265,7 +265,7 @@ export const spreads: Spread[] = [
   {
     id: "yearly",
     name: "1년 운세",
-    description: "12개월의 흐름과 올해의 테마를 봅니다",
+    description: "1월부터 12월까지 월별 운세와 올해의 핵심 테마를 13장으로 총정리합니다",
     cardCount: 13,
     positions: [
       { index: 0, label: "1월", x: 15, y: 15 },

@@ -108,18 +108,37 @@ export default function SetupForm({
       />
 
       {/* Reverse toggle */}
-      <div className="flex items-center justify-center text-sm text-gray-400">
+      <div className="flex items-center justify-center gap-3 text-sm text-gray-400">
+        <span className="text-gray-300">역방향</span>
         <button
+          role="switch"
+          aria-checked={allowReversed}
           onClick={() => setAllowReversed(!allowReversed)}
-          className="flex items-center gap-1.5 hover:text-gray-200 transition-colors"
+          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+            allowReversed ? "bg-[#B56B6B]" : "bg-gray-600"
+          }`}
         >
           <span
-            className={`inline-block w-2.5 h-2.5 rounded-sm ${
-              allowReversed ? "bg-[#B56B6B]" : "bg-gray-600"
+            className={`inline-block h-4 w-4 rounded-full bg-white transition-transform ${
+              allowReversed ? "translate-x-6" : "translate-x-1"
             }`}
           />
-          역방향 {allowReversed ? "On" : "Off"}
         </button>
+        <span className={allowReversed ? "text-gray-200" : "text-gray-500"}>
+          {allowReversed ? "On" : "Off"}
+        </span>
+        <div className="relative group">
+          <button
+            type="button"
+            className="w-5 h-5 rounded-full border border-gray-500 text-gray-400 text-xs flex items-center justify-center hover:border-gray-300 hover:text-gray-200 transition-colors"
+          >
+            ?
+          </button>
+          <div className="absolute bottom-7 left-1/2 -translate-x-1/2 hidden group-hover:block w-56 p-3 rounded-lg bg-gray-700 text-xs text-gray-200 shadow-lg z-20 leading-relaxed">
+            역방향을 켜면 카드가 뒤집혀 나올 수 있어, 한 장의 카드에서 정방향과 역방향 두 가지 의미를 모두 읽을 수 있습니다. 더 섬세하고 깊이 있는 리딩이 가능해집니다.
+            <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700" />
+          </div>
+        </div>
       </div>
 
       {/* Start button */}

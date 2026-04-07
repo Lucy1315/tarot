@@ -11,10 +11,12 @@ export default function SpreadLayout({
   drawnCards,
 }: SpreadLayoutProps) {
   // Calculate the actual height needed based on card positions
-  // Cards are at y% positions, add some padding for card height
+  const minY = Math.min(...spread.positions.map((p) => p.y));
   const maxY = Math.max(...spread.positions.map((p) => p.y));
+  // Add top padding so cards don't extend above the container
+  const topPad = minY < 15 ? 15 - minY : 0;
   // Add 15% for card height below the last card center + label text
-  const heightPercent = Math.min(maxY + 18, 100);
+  const heightPercent = Math.min(maxY + topPad + 18, 120);
 
   return (
     <div className="relative w-full" style={{ paddingBottom: `${heightPercent}%` }}>
@@ -29,7 +31,7 @@ export default function SpreadLayout({
               className="absolute -translate-x-1/2 -translate-y-1/2"
               style={{
                 left: `${pos.x}%`,
-                top: `${pos.y}%`,
+                top: `${pos.y + topPad}%`,
                 transform: pos.rotation
                   ? `translate(-50%, -50%) rotate(${pos.rotation}deg)`
                   : "translate(-50%, -50%)",

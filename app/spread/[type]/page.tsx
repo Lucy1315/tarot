@@ -92,7 +92,7 @@ export default function SpreadPage() {
       {phase === "result" && (
         <div>
           {question && (
-            <div className="mb-6 mx-auto max-w-md text-center py-3 px-6 rounded-full bg-gray-200/80 dark:bg-gray-700/80">
+            <div className="mb-6 mx-auto max-w-md text-center py-3 px-6 rounded-full bg-gray-200/80 dark:bg-gray-700/80 relative z-10">
               <p className="text-sm font-medium text-gray-700 dark:text-gray-200">{question}</p>
             </div>
           )}
